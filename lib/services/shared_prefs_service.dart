@@ -18,24 +18,24 @@ class SharedPrefsService {
   }
 
   int? getInt(String key) {
-    return instance.getInt(key);
+    return prefs.getInt(key);
   }
 
   Future<bool> setInt(String key, int value) async {
     try {
-      return await instance.setInt(key, value).then((value) => true);
+      return await prefs.setInt(key, value).then((value) => true);
     } catch (e) {
       return false;
     }
   }
 
   String? getString(String key) {
-    return instance.getString(key);
+    return prefs.getString(key);
   }
 
   Future<bool> setString(String key, String value) async {
     try {
-      return await instance.setString(key, value).then((value) => true);
+      return await prefs.setString(key, value).then((value) => true);
     } catch (e) {
       return false;
     }
